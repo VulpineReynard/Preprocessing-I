@@ -88,6 +88,7 @@ video {
   border: 0;
   font-size: 62.5%;
   font: inherit;
+  font-family: 'Open Sans', sans-serif;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -129,13 +130,16 @@ table {
   margin: 10px;
 }
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+}
+p {
+  font-size: 0.9rem;
 }
 /* Set every element's box-sizing to border-box */
 * {
@@ -365,7 +369,7 @@ h3 {
 }
 .container .work-history .work-container {
   width: 96%;
-  height: auto;
+  height: 90%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -374,7 +378,7 @@ h3 {
 }
 .container .work-history .work-container div {
   width: 32%;
-  height: auto;
+  height: 100%;
   background-color: #F8F8F8;
   border-radius: 8px;
   display: flex;
@@ -386,11 +390,20 @@ h3 {
   text-align: center;
   margin: 5px;
   width: 90%;
-  height: 40%;
+  height: 30%;
   padding: 4%;
   border-bottom: 1px solid grey;
 }
 .container .work-history .work-container div p {
   margin-top: 2%;
   margin-bottom: 2%;
+}
+.container footer {
+  border: 1px solid white;
+  border-radius: 8px;
+  background-color: #E8E8E8;
+  margin-top: 10px;
+  margin-bottom: 10%;
+  width: 100%;
+  height: 100px;
 }
