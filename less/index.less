@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	background-color: #F8F8F8;
 	line-height: 1;
 }
 ol, ul {
@@ -49,17 +50,29 @@ table {
 	margin: 10px;
 }
 
+h1 {
+	font-size: 2.75rem;
+}
+h2 {
+	font-size: 1.75rem;
+}
+
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
 }
 
 // Mixins //
+.box-properties {
+	border-radius: 8px;
+	background-color: lightgray;
+}
 
 .container {
 	max-width: 1000px;
 	margin: auto;
 
+	// Header //
 	header {
 		width: 100%;
 		height: 100px;
@@ -67,26 +80,61 @@ table {
 		display: flex;
 
 		nav {
+			.box-properties();
 			text-align: center;
-			background-color: gray;
-			border-radius: 8px;
 			width: 50%;
 			height: 80%;
 			margin: auto;
 			display: flex;
 			align-items: center;
-			justify-content: space-around;
+			justify-content: space-evenly;
 
 			a {
 				text-decoration: none;
-				color: white;
+				color: black;
 				padding: 10px;
 				transition: transform 0.5s;
-				font-size: 1.1em;
+				font-size: 1.2rem;
 			}
 			a:hover {
 				transform: scale(1.3);
 			}
+		}
+	}
+
+	// Top Content Section //
+	.top-content {
+		.box-properties();
+		width: 100%;
+		height: 500px;
+		display: flex;
+		justify-content: space-evenly;
+		background-color: lightgrey;
+
+		.left-content {
+			display: flex;
+			flex-direction: column;
+			width: 33%;
+			align-items: center;
+			margin: auto;
+
+			h1 {
+				padding-bottom: 10px;
+			}
+			h2 {
+				width: 75%;
+				text-align: center;
+				padding-top: 10px;
+				border-top: 1px solid grey;
+			}
+		}
+
+		img {
+			width: 33%;
+		}
+
+		.right-content {
+			width: 33%;
 		}
 	}
 }
