@@ -33,6 +33,9 @@ footer, header, hgroup, menu, nav, section {
 body {
 	background-color: #F8F8F8;
 	line-height: 1;
+	@media(max-width: 500px) {
+		background-color: none;
+	}
 }
 ol, ul {
 	list-style: none;
@@ -53,15 +56,24 @@ table {
 
 h1 {
 	font-size: 2.2rem;
+	@media (max-width: 500px) {
+		font-size: 1.4rem;
+	}
 }
 h2 {
 	font-size: 1.2rem;
 }
 h3{
 	font-size: 1.15rem;
+	@media (max-width: 500px) {
+		font-size: .9rem;
+	}
 }
 p {
 	font-size: .9rem;
+	@media (max-width: 500px) {
+		font-size: .7rem;
+	}
 }
 
 /* Set every element's box-sizing to border-box */
@@ -70,10 +82,13 @@ p {
 }
 
 // Mixins //
+@box-background: #E8E8E8;
+@page-background: #F8F8F8;
+
 .box-properties {
 	border: 1px solid white;
 	border-radius: 8px;
-	background-color: #E8E8E8
+	background-color: @box-background;
 }
 
 .middle-content-box-properties {
@@ -94,6 +109,12 @@ p {
 	padding-bottom: 3%;
 }
 
+.education-boxes-phone {
+	width: 100%;
+	height: 200px;
+	margin-top: 2%;
+}
+
 .container {
 	max-width: 1000px;
 	margin: auto;
@@ -105,6 +126,10 @@ p {
 		margin-top: 30px;
 		display: flex;
 
+		@media (max-width: 500px) {
+			height: auto;
+		}
+
 		nav {
 			.box-properties();
 			text-align: center;
@@ -115,14 +140,27 @@ p {
 			align-items: center;
 			justify-content: space-evenly;
 
+			@media (max-width: 500px) {
+				flex-direction: column;
+				width: 100%;
+				height: auto;
+				border-radius: 0px;
+			}
+
 			a {
 				text-decoration: none;
-				background-color: #F8F8F8;
+				background-color: @page-background;
 				color: black;
 				border-radius: 8px;
 				padding: 10px;
 				transition: transform 0.3s;
 				font-size: 1.2rem;
+
+				@media (max-width: 500px) {
+					width: 100%;
+					border-bottom: 1px solid black;
+					border-radius: 0px;
+				}
 			}
 			a:hover {
 				transform: scale(1.3);
@@ -140,6 +178,11 @@ p {
 		display: flex;
 		justify-content: space-evenly;
 
+		@media (max-width: 500px) {
+			flex-direction: column;
+			margin-top: 2%;
+		}
+
 		.left-content {
 			display: flex;
 			flex-direction: column;
@@ -148,10 +191,16 @@ p {
 			margin: auto;
 			margin-left: 1.5%;
 			margin-right: 1.5%;
-			background-color: #F8F8F8;
+			background-color: @page-background;
 			border-radius: 8px;
 			padding-top: 1%;
 			padding-bottom: 1%;
+			@media (max-width: 500px) {
+				width: 100%;
+				margin: 0;
+				border-radius: 0px;
+				background-color: @box-background;
+			}
 
 			h1 {
 				padding-bottom: 15px;
@@ -170,7 +219,13 @@ p {
 			height: 80%;
 			margin: auto;
 			border-radius: 12px;
-			border: .2em solid #F8F8F8;
+			border: .2em solid @page-background;
+
+			@media (max-width: 500px) {
+				width: 50%;
+				height: auto;
+				margin-top: 3%;
+			}
 		}
 
 		.right-content {
@@ -181,6 +236,10 @@ p {
 			text-align: center;
 			margin: auto;
 			padding: 2%;
+
+			@media (max-width: 500px) {
+				width: 80%;
+			}
 
 			p{
 				font-size: 1.3em;
@@ -193,6 +252,9 @@ p {
 		height: auto;
 		display: flex;
 		justify-content: space-between;
+		@media(max-width: 500px) {
+			flex-direction: column;
+		}
 
 		.technologies {
 			.middle-content-box-properties();
@@ -201,6 +263,9 @@ p {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			@media(max-width: 500px) {
+				width: 100%;
+			}
 
 			h2 {
 				.middleContentHeader();
@@ -227,6 +292,11 @@ p {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			@media(max-width: 500px) {
+				width: 100%;
+				height: auto;
+				padding: 2%;
+			}
 
 			h2 {
 				.middleContentHeader();
@@ -240,23 +310,36 @@ p {
 				justify-content: center;
 				justify-content: space-evenly;
 
+				@media(max-width: 500px) {
+					flex-direction: column;
+				}
+
 				#lambda-school {
 					width: 47%;
 					height: 46%;
-					background-color: #F8F8F8;
+					background-color: @page-background;
 					border-radius: 8px;
+					@media(max-width: 500px) {
+						.education-boxes-phone();
+					}
 				}
 				#rcbc {
 					width: 47%;
 					height: 46%;
-					background-color: #F8F8F8;
+					background-color: @page-background;
 					border-radius: 8px;
+					@media(max-width: 500px) {
+						.education-boxes-phone();
+					}
 				}
 				#certs {
 					width: 96%;
 					height: 46%;
-					background-color: #F8F8F8;
+					background-color: @page-background;
 					border-radius: 8px;
+					@media(max-width: 500px) {
+						.education-boxes-phone();
+					}
 				}
 
 				div {
@@ -306,16 +389,25 @@ p {
 			justify-content: space-around;
 			margin-top: 1.5%;
 			margin-bottom: 1.5%;
+			@media (max-width: 500px) {
+				flex-direction: column;
+				height: auto;
+			}
 
 			div {
 				width: 32%;
 				height: 100%;
-				background-color: #F8F8F8;
+				background-color: @page-background;
 				border-radius: 8px;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				padding: 1.5%;
+				@media (max-width: 500px) {
+					height: 150px;
+					width: 99%;
+					margin: 1%;
+				}
 
 				h3 {
 					text-align: center;
@@ -323,11 +415,11 @@ p {
 					width: 90%;
 					height: 30%;
 					padding: 4%;
+					padding-top: 0;
 					border-bottom: 1px solid grey;
 				}
 				p {
-					margin-top: 2%;
-					margin-bottom: 2%;
+					margin: 2%;
 				}
 			}
 		}
@@ -339,6 +431,12 @@ p {
 		margin-bottom: 10%;
 		width: 100%;
 		height: 100px;
+		text-align: center;
+		padding: 20px;
+		
+		p {
+			padding-top: 5px;
+		}
 	}
 }
 
