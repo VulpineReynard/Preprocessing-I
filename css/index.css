@@ -125,12 +125,40 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  margin: 10px;
 }
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
 }
-html,
-body {
-  height: 100%;
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+.container header {
+  width: 100%;
+  height: 100px;
+  margin-top: 30px;
+  display: flex;
+}
+.container header nav {
+  text-align: center;
+  background-color: gray;
+  border-radius: 8px;
+  width: 50%;
+  height: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.container header nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  transition: transform 0.5s;
+  font-size: 1.1em;
+}
+.container header nav a:hover {
+  transform: scale(1.3);
 }
