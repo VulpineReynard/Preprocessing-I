@@ -165,6 +165,23 @@ p {
 * {
   box-sizing: border-box;
 }
+.bounce-in {
+  animation-name: bounceIn;
+  animation-duration: 2s;
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .box-properties {
   border: 1px solid white;
   border-radius: 8px;
@@ -262,6 +279,8 @@ p {
   }
 }
 .container .top-content .left-content {
+  animation-name: bounceIn;
+  animation-duration: 2s;
   display: flex;
   flex-direction: column;
   width: 33%;
@@ -273,6 +292,19 @@ p {
   border-radius: 8px;
   padding-top: 1%;
   padding-bottom: 1%;
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 @media (max-width: 500px) {
   .container .top-content .left-content {
@@ -307,6 +339,8 @@ p {
   }
 }
 .container .top-content .right-content {
+  animation-name: bounceIn;
+  animation-duration: 2s;
   font-style: italic;
   width: 33%;
   display: flex;
@@ -314,6 +348,20 @@ p {
   text-align: center;
   margin: auto;
   padding: 2%;
+  transition: all 0.1s ease-in-out;
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 @media (max-width: 500px) {
   .container .top-content .right-content {
@@ -322,6 +370,9 @@ p {
 }
 .container .top-content .right-content p {
   font-size: 1.3em;
+}
+.container .top-content .right-content:hover {
+  transform: scale(1.1);
 }
 .container .middle-content {
   width: 100%;
@@ -368,6 +419,10 @@ p {
   width: 30%;
   height: 30%;
   margin: 4%;
+  transition: all 0.1s ease-in-out;
+}
+.container .middle-content .technologies .tech-images img:hover {
+  transform: scale(1.2);
 }
 .container .middle-content .education {
   width: 49.5%;
