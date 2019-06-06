@@ -183,7 +183,7 @@ p {
   }
 }
 .box-properties {
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 8px;
   background-color: #E8E8E8;
 }
@@ -223,7 +223,7 @@ p {
   }
 }
 .container header nav {
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 8px;
   background-color: #E8E8E8;
   text-align: center;
@@ -262,7 +262,7 @@ p {
   transform: scale(1.3);
 }
 .container .top-content {
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 8px;
   background-color: #E8E8E8;
   width: 100%;
@@ -388,7 +388,7 @@ p {
 .container .middle-content .technologies {
   width: 49.5%;
   margin-top: 1%;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 8px;
   background-color: #E8E8E8;
   text-align: center;
@@ -424,10 +424,82 @@ p {
 .container .middle-content .technologies .tech-images img:hover {
   transform: scale(1.2);
 }
+.container .middle-content .technologies .tech-images #html5 {
+  animation-delay: 3s;
+  animation-name: bounceIn;
+  animation-duration: 2s;
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.container .middle-content .technologies .tech-images #css3 {
+  animation-delay: 3.2s;
+  animation-name: bounceIn;
+  animation-duration: 2s;
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.container .middle-content .technologies .tech-images #js {
+  animation-delay: 3.4s;
+  animation-name: bounceIn;
+  animation-duration: 2s;
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.container .middle-content .technologies .tech-images #cpp {
+  animation-delay: 3.6s;
+  animation-name: bounceIn;
+  animation-duration: 2s;
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .container .middle-content .education {
   width: 49.5%;
   margin-top: 1%;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 8px;
   background-color: #E8E8E8;
   text-align: center;
@@ -524,7 +596,7 @@ p {
   margin-top: 15%;
 }
 .container .work-history {
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 8px;
   background-color: #E8E8E8;
   width: 100%;
@@ -588,7 +660,7 @@ p {
   margin: 2%;
 }
 .container footer {
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 8px;
   background-color: #E8E8E8;
   margin-top: 10px;

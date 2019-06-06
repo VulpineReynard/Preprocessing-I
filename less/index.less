@@ -102,8 +102,21 @@ p {
 	}
 }
 
+.hide (dur) {
+	animation-name: hide;
+	animation-duration: dur;
+
+	@keyframes hide {
+		0% {
+			display: none;
+		} 100% {
+			display: none;
+		}
+	}
+}
+
 .box-properties {
-	border: 1px solid white;
+	border: 2px solid white;
 	border-radius: 8px;
 	background-color: @box-background;
 }
@@ -309,10 +322,27 @@ p {
 					width: 30%;
 					height: 30%;
 					margin: 4%;
-					transition: all .1s ease-in-out;
+					transition: all .2s ease-in-out;
 				}
 				img:hover {
 					transform: scale(1.2);
+				}
+				#html5 {
+					animation-delay: 3s;
+					.bounce-in();
+				}
+				#css3 {
+					animation-delay: 3.20s;
+					.bounce-in();
+				}
+				#js {
+					animation-delay: 3.4s;
+
+					.bounce-in();
+				}
+				#cpp {
+					animation-delay: 3.6s;
+					.bounce-in();
 				}
 			}
 		}
