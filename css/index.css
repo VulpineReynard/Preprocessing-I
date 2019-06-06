@@ -501,6 +501,12 @@ p {
     margin-top: 2%;
   }
 }
+.container .middle-content .education .schools #certs .list-of-certs {
+  width: 100%;
+}
+.container .middle-content .education .schools #certs .list-of-certs ul {
+  margin-top: 3%;
+}
 .container .middle-content .education .schools div {
   display: flex;
   flex-direction: column;
@@ -509,8 +515,9 @@ p {
 .container .middle-content .education .schools div h3 {
   margin: 5px;
   width: 90%;
-  height: 40%;
-  padding: 4%;
+  height: 30%;
+  padding: 3%;
+  padding-bottom: 0px;
   border-bottom: 1px solid grey;
 }
 .container .middle-content .education .schools div p {
