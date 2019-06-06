@@ -419,10 +419,13 @@ p {
   width: 30%;
   height: 30%;
   margin: 4%;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding: 2%;
 }
 .container .middle-content .technologies .tech-images img:hover {
   transform: scale(1.2);
+  background: lightgrey;
+  border-radius: 10px;
 }
 .container .middle-content .technologies .tech-images #html5 {
   animation-delay: 3s;
